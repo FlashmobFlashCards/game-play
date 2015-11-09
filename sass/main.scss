@@ -2,11 +2,288 @@
 @import "neat";
 @import "font-awesome";
 
+
+//Fun Colors
+$greenOcean: #00CEA7;
+$fuschiaFolly: #FF0065;
+$orangeSafety: #FF6900;
+$greyGunsmoke: #838685;
+$orangeFlush: #FF7F00;
+$greenCarribean: #00E9BA;
+$greyBalticSea: #3E3E3E;
+$pinkTickle: #FF86A6;
+
+
 body {
-  background: #FFF;
-  opacity: 2;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px;
+  background: #7A8BA4;
+  font-family: 'Droid Sans', sans-serif;
+  @include outer-container;
+
+//////// The Home Page with the log in and sign up container //////////
+
+  .gameLogo {
+    @include span-columns(6);
+    @include shift(3);
+    animation-duration: 3s;
+    animation-name: slidein;
+  }
+
+    @keyframes slidein {
+    from {
+      margin-bottom: 100%;
+      width: 30%;
+    }
+    to {
+      margin-bottom: 50%;
+      width: 50%;
+    }
+  }
+
+  .container {
+    @include span-columns(6);
+    @include shift(3);
+    margin: 7% 2.35% 0 31%;
+
+    .logInput {
+      display: block;
+    }
+
+    .inputField {
+      width: 75%;
+      margin-bottom: 2%;
+      border: none;
+      border-radius: 2px;
+      height: 40px;
+    }
+
+    .loginBtn,
+    .registerBtn {
+      padding: 2%;
+      border: none;
+      border-radius: 3px;
+      color: #fff;
+    }
+
+    .loginBtn {
+      width: 17%;
+      background: $orangeSafety;
+    }
+
+    .loginBtn:hover {
+      background: $orangeFlush;
+    }
+
+    .registerLine {
+      margin-top: 8%;
+
+      span.signUp {
+        color: #fff;
+      }
+
+      .registerBtn {
+        margin-left: 4%;
+        width: 20%;
+        background: $greenOcean;
+      }
+
+      .registerBtn:hover {
+        background: $greenCarribean;
+      }
+    }
+  }
+
+  footer {
+    @include span-columns(6);
+    @include shift(3);
+    margin-top: 10%;
+    text-align: center;
+    color: #fff;
+  }
+
+
+  //////////// Register Form Page /////////////
+
+  .regForm {
+    margin-top: 10%;
+
+    h2 {
+      text-align: center;
+      color: $greyBalticSea;
+    }
+  }
+
+  .regField {
+    display: block;
+    @include span-columns(6);
+    @include shift(3);
+    height: 46px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 3px;
+  }
+
+  .regBtn {
+    width: 22%;
+    margin: 2% 2% 0 27%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: $greenOcean;
+  }
+
+  .regBtn:hover {
+    background: $greenCarribean;
+  }
+
+  .regBackBtn {
+    width: 22%;
+    margin: 2% 0 0 0;
+    background: $orangeSafety;
+    color: #fff;
+  }
+
+  .regBackBtn:hover {
+    background: $orangeFlush;
+  }
+
+
+  ///////////// Create Deck View //////////////
+
+  .deckForm {
+    @include span-columns(6);
+    @include shift(1);
+    display: inline;
+    margin: 11% 2.35% 0 10.52%;
+    width: 42%;
+
+    .addDeck {
+      color: $greyBalticSea;
+    }
+
+    .newDeckField {
+      width: 88%;
+      height: 40px;
+      border: 1px solid $greenCarribean;
+      border-radius: 3px;
+    }
+
+    .para {
+      margin-top: 0;
+      font-size: 14px;
+      color: $greyBalticSea;
+    }
+
+    .deckSubmit,
+    .deckCreateBackBtn {
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      margin-top: 2%
+    }
+
+    .deckSubmit {
+      background: $fuschiaFolly;
+    }
+
+    .deckSubmit:hover {
+      background: $pinkTickle;
+    }
+
+    .deckCreateBackBtn {
+      margin-left: 2%;
+      background: $greenOcean;
+    }
+
+    .deckCreateBackBtn:hover {
+      background: $greenCarribean;
+    }
+  }
+
+  .orangerex {
+    @include span-columns(6);
+    display: inline;
+    width: 40%;
+  }
+}
+
+//////////////// Deck Gallery ///////////////////
+
+.decks {
+  @include span-columns(9);
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px;
+}
+
+//////////////////// Card Gallery //////////////
+
+h2 {
+  text-align: center;
+  display: inline-block;
+  padding: 5px;
+}
+
+.cardGalleryBack {
+  background: none;
+  border: none;
+}
+
+.fa-angle-left {
+  font-size: 25px;
+  margin-right: 350px;
+}
+
+.fa-angle-left:hover {
+  background-color: $orangeFlush;
+}
+
+.eachCard {
+  @include span-columns(9);
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid $fuschiaFolly;
+  border-radius: 3px;
+  width: 175px;
+  height: 175px;
+  margin-top: 20px;
+  background-color: $pinkTickle;
+  padding-top: 50px;
+}
+
+.eachCard:hover {
+  cursor: pointer;
+  background-color: #ff9eb8;
+}
+
+.addClickBtn {
+  display: inline-block;
+
+  .fa-plus-square-o {
+    font-size: 25px;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 15px;
+    text-align: right;
+  }
+
+  .fa-plus-square-o:hover {
+    background-color: $greenOcean;
+  }
+}
+
+// GAME //
+
+.whole-page {
+  @include outer-container;
+  @include span-columns(4);
+  padding: 500px;
 }
 
 img {
@@ -16,6 +293,7 @@ img {
 .image {
    position: relative;
    width: 100%; /* for IE 6 */
+   text-align: center;
 }
 
 h2 {
@@ -25,10 +303,35 @@ h2 {
    width: 100%;
 }
 
+
 h2 span {
    color: white;
    font: bold 15px;
    letter-spacing: -1px;
    background: rgb(0, 0, 0); /* fallback color */
    padding: 10px;
+}
+
+.front {
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #01C4D9;
+}
+
+.back {
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #01C4D9;
+}
+
+.game-title {
+  text-align: center;
+}
+
+.clock-timer {
+  border: 1px solid black;
+  text-align: center;
 }

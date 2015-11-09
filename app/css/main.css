@@ -2025,10 +2025,244 @@ html {
   content: ""; }
 
 body {
-  background: #FFF;
-  opacity: 2;
-  font-family: 'Lato', sans-serif;
-  font-size: 15px; }
+  background: #7A8BA4;
+  font-family: 'Droid Sans', sans-serif;
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto; }
+  body::after {
+    clear: both;
+    content: "";
+    display: table; }
+  body .gameLogo {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    animation-duration: 3s;
+    animation-name: slidein; }
+    body .gameLogo:last-child {
+      margin-right: 0; }
+
+@keyframes slidein {
+  from {
+    margin-bottom: 100%;
+    width: 30%; }
+  to {
+    margin-bottom: 50%;
+    width: 50%; } }
+  body .container {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    margin: 7% 2.35% 0 31%; }
+    body .container:last-child {
+      margin-right: 0; }
+    body .container .logInput {
+      display: block; }
+    body .container .inputField {
+      width: 75%;
+      margin-bottom: 2%;
+      border: none;
+      border-radius: 2px;
+      height: 40px; }
+    body .container .loginBtn,
+    body .container .registerBtn {
+      padding: 2%;
+      border: none;
+      border-radius: 3px;
+      color: #fff; }
+    body .container .loginBtn {
+      width: 17%;
+      background: #FF6900; }
+    body .container .loginBtn:hover {
+      background: #FF7F00; }
+    body .container .registerLine {
+      margin-top: 8%; }
+      body .container .registerLine span.signUp {
+        color: #fff; }
+      body .container .registerLine .registerBtn {
+        margin-left: 4%;
+        width: 20%;
+        background: #00CEA7; }
+      body .container .registerLine .registerBtn:hover {
+        background: #00E9BA; }
+  body footer {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    margin-top: 10%;
+    text-align: center;
+    color: #fff; }
+    body footer:last-child {
+      margin-right: 0; }
+  body .regForm {
+    margin-top: 10%; }
+    body .regForm h2 {
+      text-align: center;
+      color: #3E3E3E; }
+  body .regField {
+    display: block;
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 25.58941%;
+    height: 46px;
+    margin-top: 15px;
+    border: none;
+    border-radius: 3px; }
+    body .regField:last-child {
+      margin-right: 0; }
+  body .regBtn {
+    width: 22%;
+    margin: 2% 2% 0 27%;
+    padding: 8px;
+    border: none;
+    border-radius: 3px;
+    color: #fff;
+    background: #00CEA7; }
+  body .regBtn:hover {
+    background: #00E9BA; }
+  body .regBackBtn {
+    width: 22%;
+    margin: 2% 0 0 0;
+    background: #FF6900;
+    color: #fff; }
+  body .regBackBtn:hover {
+    background: #FF7F00; }
+  body .deckForm {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    margin-left: 8.5298%;
+    display: inline;
+    margin: 11% 2.35% 0 10.52%;
+    width: 42%; }
+    body .deckForm:last-child {
+      margin-right: 0; }
+    body .deckForm .addDeck {
+      color: #3E3E3E; }
+    body .deckForm .newDeckField {
+      width: 88%;
+      height: 40px;
+      border: 1px solid #00E9BA;
+      border-radius: 3px; }
+    body .deckForm .para {
+      margin-top: 0;
+      font-size: 14px;
+      color: #3E3E3E; }
+    body .deckForm .deckSubmit,
+    body .deckForm .deckCreateBackBtn {
+      color: #fff;
+      border: none;
+      border-radius: 3px;
+      padding: 10px;
+      margin-top: 2%; }
+    body .deckForm .deckSubmit {
+      background: #FF0065; }
+    body .deckForm .deckSubmit:hover {
+      background: #FF86A6; }
+    body .deckForm .deckCreateBackBtn {
+      margin-left: 2%;
+      background: #00CEA7; }
+    body .deckForm .deckCreateBackBtn:hover {
+      background: #00E9BA; }
+  body .orangerex {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 48.82117%;
+    display: inline;
+    width: 40%; }
+    body .orangerex:last-child {
+      margin-right: 0; }
+
+.decks {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  list-style: none;
+  display: inline-block;
+  padding: 30px;
+  border: 1px solid black;
+  width: 150px;
+  height: 150px;
+  margin-top: 20px; }
+  .decks:last-child {
+    margin-right: 0; }
+
+h2 {
+  text-align: center;
+  display: inline-block;
+  padding: 5px; }
+
+.cardGalleryBack {
+  background: none;
+  border: none; }
+
+.fa-angle-left {
+  font-size: 25px;
+  margin-right: 350px; }
+
+.fa-angle-left:hover {
+  background-color: #FF7F00; }
+
+.eachCard {
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 74.41059%;
+  list-style: none;
+  display: inline-block;
+  padding: 20px;
+  border: 1px solid #FF0065;
+  border-radius: 3px;
+  width: 175px;
+  height: 175px;
+  margin-top: 20px;
+  background-color: #FF86A6;
+  padding-top: 50px; }
+  .eachCard:last-child {
+    margin-right: 0; }
+
+.eachCard:hover {
+  cursor: pointer;
+  background-color: #ff9eb8; }
+
+.addClickBtn {
+  display: inline-block; }
+  .addClickBtn .fa-plus-square-o {
+    font-size: 25px;
+    display: inline-block;
+    padding: 5px;
+    margin-left: 15px;
+    text-align: right; }
+  .addClickBtn .fa-plus-square-o:hover {
+    background-color: #00CEA7; }
+
+.whole-page {
+  max-width: 68em;
+  margin-left: auto;
+  margin-right: auto;
+  float: left;
+  display: block;
+  margin-right: 2.35765%;
+  width: 31.76157%;
+  padding: 500px; }
+  .whole-page::after {
+    clear: both;
+    content: "";
+    display: table; }
+  .whole-page:last-child {
+    margin-right: 0; }
 
 img {
   padding: 20px; }
@@ -2036,7 +2270,8 @@ img {
 .image {
   position: relative;
   width: 100%;
-  /* for IE 6 */ }
+  /* for IE 6 */
+  text-align: center; }
 
 h2 {
   position: absolute;
@@ -2051,5 +2286,25 @@ h2 span {
   background: black;
   /* fallback color */
   padding: 10px; }
+
+.front {
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #01C4D9; }
+
+.back {
+  margin: 0 auto;
+  text-align: center;
+  width: 150px;
+  height: 150px;
+  background-color: #01C4D9; }
+
+.game-title {
+  text-align: center; }
+
+.clock-timer {
+  border: 1px solid black;
+  text-align: center; }
 
 /*# sourceMappingURL=main.css.map */
