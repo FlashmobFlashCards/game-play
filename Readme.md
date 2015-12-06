@@ -1,6 +1,6 @@
-## Welcome to My Project
+## what the deck
 
-> I am your Readme.md file, you should probably update me.
+> A flashcard game using REACT and Backbone
 
 
 ## Usage
